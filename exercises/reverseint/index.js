@@ -10,10 +10,7 @@
 
 function reverseInt(n) {
     let str = n.toString().split('').reduce((rev, char) => char + rev, '')
-    if (Math.sign(n) < 0) {
-        str = '-' + str.substr(0, str.length-1)
-    }
-    return parseInt(str)
+    return (parseInt(str) * Math.sign(n))
 }
 
 module.exports = reverseInt;
