@@ -19,7 +19,7 @@ function anagrams(stringA, stringB) {
     for (let i = 0; i < stringB.length; i++) {
         objB[stringB[i]] = objB[stringB[i]] + 1 || 1    
     }
-    for (letter in objA) {
+    for (let letter in objA) {
         if (objA[letter] != objB[letter]) {
             return false
         }
